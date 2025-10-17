@@ -58,40 +58,42 @@ Frontend runs on `http://localhost:3000`
 
 ## Deployment
 
-### Deploy to Vercel
+### Deploy to Railway (Recommended)
 
-1. **Fork or Clone this repository**
+Railway is perfect for this full-stack Python ML app with no size limits.
 
-2. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/yourusername/cashflow-mtl.git
-   git push -u origin main
-   ```
+1. **Sign up for Railway**
+   - Go to [railway.app](https://railway.app)
+   - Sign in with GitHub
 
-3. **Connect to Vercel**
-   - Go to [vercel.com](https://vercel.com)
+2. **Create New Project**
    - Click "New Project"
-   - Import your GitHub repository
-   - Vercel will auto-detect the configuration from `vercel.json`
+   - Select "Deploy from GitHub repo"
+   - Choose `othmane-zizi-pro/cashflow-mtl`
 
-4. **Configure Environment Variables** (if needed)
-   - Add any environment variables in Vercel dashboard
-   - No API keys required for basic functionality
+3. **Configure Deployment**
+   - Railway will auto-detect the configuration from `Procfile`
+   - Set the start command: `cd backend && gunicorn app:app`
+   - Add environment variables if needed (optional)
 
-5. **Deploy**
+4. **Deploy**
    - Click "Deploy"
-   - Your app will be live at `https://your-project.vercel.app`
+   - Your app will be live at `https://your-app.railway.app`
+   - Build takes 3-5 minutes
 
 ### Environment Variables
 
-The app works out of the box with sample data. Optional configuration:
+The app works out of the box with sample data. Optional configuration in Railway:
 
 ```env
 APIFY_API_TOKEN=your_token_here  # Optional: For real-time Centris scraping
+PORT=5001                         # Railway will set this automatically
 FLASK_ENV=production
 ```
+
+### Why Not Vercel?
+
+Vercel has a 250 MB limit for serverless functions. This app's Python backend with scikit-learn, pandas, and the ML model exceeds that limit. Railway has no such limitations and is better suited for full-stack Python ML applications.
 
 ## Project Structure
 
@@ -115,7 +117,8 @@ airbnb_project/
 │   │   └── index.js
 │   ├── public/
 │   └── package.json
-├── vercel.json               # Vercel deployment config
+├── Procfile                  # Railway deployment config
+├── railway.json              # Railway configuration
 ├── .gitignore
 └── README.md
 ```
