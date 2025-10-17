@@ -10,11 +10,7 @@ const BusinessPlan = () => {
   const [loading, setLoading] = useState(true);
   const API_URL = 'http://localhost:5001';
 
-  useEffect(() => {
-    fetchProperty();
-  }, [centrisId]);
-
-  const fetchProperty = async () => {
+  const fetchProperty = React.useCallback(async () => {
     try {
       const response = await fetch(`${API_URL}/api/property/${centrisId}`);
       const data = await response.json();
@@ -26,7 +22,11 @@ const BusinessPlan = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [centrisId, API_URL]);
+
+  useEffect(() => {
+    fetchProperty();
+  }, [fetchProperty]);
 
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-CA', {

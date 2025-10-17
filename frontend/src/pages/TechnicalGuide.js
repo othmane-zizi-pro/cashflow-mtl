@@ -80,8 +80,8 @@ const TechnicalGuide = () => {
 
           <h3>2.1 Model Architecture</h3>
           <div className="code-box">
-            <strong>Algorithm:</strong> Random Forest Regression<br/>
-            <strong>Implementation:</strong> scikit-learn RandomForestRegressor<br/>
+            <strong>Algorithm:</strong> Random Forest Regression<br />
+            <strong>Implementation:</strong> scikit-learn RandomForestRegressor<br />
             <strong>Hyperparameters:</strong>
             <ul>
               <li>n_estimators: 100 (number of decision trees)</li>
@@ -207,12 +207,12 @@ Annual Revenue = monthly_revenue × 12`}</pre>
           <h3>2.7 Occupancy Rate Estimation</h3>
           <p>
             Since Inside Airbnb doesn't provide actual occupancy data, we use <strong>conservative
-            industry benchmarks</strong>:
+              industry benchmarks</strong>:
           </p>
           <ul>
             <li><strong>Base Occupancy:</strong> 65% (Montreal market average)</li>
             <li><strong>Adjustments:</strong> +5% for premium locations (Old Montreal, Downtown),
-            -5% for peripheral areas</li>
+              -5% for peripheral areas</li>
             <li><strong>Formula:</strong> Estimated Annual Revenue = Nightly Rate × 365 × 0.65</li>
           </ul>
         </section>
@@ -602,13 +602,13 @@ cashflow investments that rely on appreciation for returns.`}</pre>
           <div className="source-card">
             <h4>📦 Training Data Source</h4>
             <p>
-              <strong>Provider:</strong> Inside Airbnb (independent, non-commercial)<br/>
+              <strong>Provider:</strong> Inside Airbnb (independent, non-commercial)<br />
               <strong>Website:</strong> <a href="http://insideairbnb.com/montreal" target="_blank" rel="noopener noreferrer">
                 insideairbnb.com/montreal
-              </a><br/>
-              <strong>Dataset:</strong> Montreal listings (8,518 properties)<br/>
-              <strong>Fields Used:</strong> price, bedrooms, bathrooms, accommodates, latitude, longitude<br/>
-              <strong>License:</strong> Creative Commons CC0 1.0 Universal (public domain)<br/>
+              </a><br />
+              <strong>Dataset:</strong> Montreal listings (8,518 properties)<br />
+              <strong>Fields Used:</strong> price, bedrooms, bathrooms, accommodates, latitude, longitude<br />
+              <strong>License:</strong> Creative Commons CC0 1.0 Universal (public domain)<br />
               <strong>Last Updated:</strong> Check website for latest snapshot date
             </p>
           </div>
@@ -617,8 +617,8 @@ cashflow investments that rely on appreciation for returns.`}</pre>
           <div className="source-card">
             <h4>🏠 Real Estate Data</h4>
             <p>
-              <strong>Primary Source:</strong> Centris.ca (Quebec MLS)<br/>
-              <strong>Method:</strong> Manual entry by users<br/>
+              <strong>Primary Source:</strong> Centris.ca (Quebec MLS)<br />
+              <strong>Method:</strong> Manual entry by users<br />
               <strong>Validation:</strong> Users responsible for data accuracy
             </p>
           </div>
@@ -640,7 +640,7 @@ cashflow investments that rely on appreciation for returns.`}</pre>
               are publicly available for review, audit, and contribution.
             </p>
             <p>
-              <strong>GitHub Repository:</strong> <a href="https://github.com/yourusername/cashflow-mtl" target="_blank" rel="noopener noreferrer">
+              <strong>GitHub Repository:</strong> <a href="https://github.com/othmane-zizi-pro/cashflow-mtl" target="_blank" rel="noopener noreferrer">
                 github.com/yourusername/cashflow-mtl
               </a>
             </p>
