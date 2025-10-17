@@ -1,0 +1,519 @@
+/* Business Plan Styles */
+.business-plan-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.actions-bar {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn,
+.print-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-btn {
+  background-color: #667eea;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #5568d3;
+}
+
+.print-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.print-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.business-plan-document {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.bp-section {
+  padding: 3rem 4rem;
+  page-break-inside: avoid;
+}
+
+/* Cover Page */
+.cover-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  page-break-after: always;
+}
+
+.cover-content {
+  width: 100%;
+}
+
+.cover-logo {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bp-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.bp-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 3rem;
+}
+
+.property-showcase {
+  margin: 3rem 0;
+}
+
+.cover-image {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.cover-address {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cover-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cover-footer {
+  margin-top: 4rem;
+  opacity: 0.9;
+}
+
+.cover-footer p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.powered-by {
+  font-size: 1rem !important;
+  opacity: 0.85;
+  margin-top: 1rem !important;
+}
+
+/* Section Styles */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #667eea;
+}
+
+.section-description {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.executive-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+  border-left: 4px solid #667eea;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.highlight-box h3 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.highlight-value.revenue {
+  color: #10b981;
+}
+
+.highlight-value.positive {
+  color: #10b981;
+}
+
+.highlight-value.negative {
+  color: #ef4444;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.detail-item strong {
+  color: #667eea;
+  font-size: 0.9rem;
+}
+
+.detail-item span,
+.detail-item a {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.detail-item a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.detail-item a:hover {
+  text-decoration: underline;
+}
+
+/* Tables */
+.bp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.bp-table thead {
+  background: #667eea;
+  color: white;
+}
+
+.bp-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.bp-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bp-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.bp-table td {
+  padding: 1rem;
+}
+
+.table-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.table-value {
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+}
+
+.table-value.revenue {
+  color: #10b981;
+}
+
+.table-value.positive {
+  color: #10b981;
+}
+
+.table-value.negative {
+  color: #ef4444;
+}
+
+.table-total {
+  background: #f8f9fa;
+  border-top: 2px solid #667eea;
+  border-bottom: 2px solid #667eea;
+}
+
+.table-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Metrics Row */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid #667eea;
+}
+
+.metric-card h4 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.metric-value-large {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin: 1rem 0;
+}
+
+.metric-card small {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Risk Analysis */
+.risk-section h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.risk-list {
+  list-style: none;
+  padding: 0;
+}
+
+.risk-list li {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fff5f5;
+  border-left: 4px solid #ef4444;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.risk-list li strong {
+  color: #ef4444;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Conclusion */
+.conclusion-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.bp-footer {
+  background: linear-gradient(135deg, #f8f9fc 0%, #e9ecf5 100%);
+  padding: 3rem 4rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #10b981 100%) 1;
+}
+
+.footer-logo {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-main {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.footer-sources {
+  font-size: 0.9rem;
+  color: #667eea;
+  margin: 0.75rem 0;
+}
+
+.bp-footer p {
+  margin: 0.5rem 0;
+}
+
+.disclaimer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #999;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Loading and Error States */
+.business-plan-loading,
+.business-plan-error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .business-plan-container {
+    background: white;
+  }
+
+  .business-plan-document {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .bp-section {
+    padding: 2rem;
+    page-break-inside: avoid;
+  }
+
+  .cover-page {
+    min-height: 100vh;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bp-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .bp-title {
+    font-size: 2.5rem;
+  }
+
+  .bp-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .highlights-grid,
+  .details-grid,
+  .metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-image {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .actions-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .back-btn,
+  .print-btn {
+    width: 100%;
+  }
+}

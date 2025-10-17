@@ -1,0 +1,30 @@
+{
+  "properties": [
+    {
+      "centris_id": "15469336",
+      "address": "9440 Rue Hochelaga #3 Montreal, QC H1L 2P6",
+      "price": 285000,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "sqft": 815,
+      "property_type": "Condo",
+      "url": "https://www.centris.ca/en/condos~for-sale~montreal-mercier-hochelaga-maisonneuve/15469336?uc=4",
+      "image_url": "https://mspublic.centris.ca/media.ashx?id=ADDD250DE80C15BDDDDDDDDDDA&t=pi&w=640&h=480&sm=c",
+      "latitude": 45.5017,
+      "longitude": -73.5673
+    },
+    {
+      "centris_id": "26692415",
+      "address": "109 Rue Charlotte #303 Montreal, QC H2X 1M2",
+      "price": 378900,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "sqft": 676,
+      "url": "https://www.centris.ca/en/condos~for-sale~montreal-ville-marie/26692415?uc=4",
+      "image_url": "https://mspublic.centris.ca/media.ashx?id=ADDD250DEFF3429DDDDDDD1DDD&t=pi&sm=m&w=1260&h=1024",
+      "latitude": 45.5017,
+      "longitude": -73.5673
+    }
+  ],
+  "last_updated": "2025-10-16T23:25:58.958081"
+}

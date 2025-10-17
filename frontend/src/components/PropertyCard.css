@@ -1,0 +1,380 @@
+.property-card {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Rank Badge with Modern Design */
+.rank-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+/* Modern Image Container */
+.property-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  position: relative;
+}
+
+.property-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.property-card:hover .property-image img {
+  transform: scale(1.08);
+}
+
+/* Property Header Section */
+.property-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.property-header h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+  line-height: 1.4;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.property-price {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.property-details {
+  color: #6b7280;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+/* Metrics Section */
+.property-metrics {
+  padding: 1.5rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s;
+}
+
+.metric-row:last-child {
+  border-bottom: none;
+}
+
+.metric-row:hover {
+  background-color: #f9fafb;
+  margin: 0 -0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 8px;
+}
+
+.metric-row.highlight {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+  margin: 0.5rem -1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: none;
+  border-top: 2px solid #e0e7ff;
+  border-bottom: 2px solid #e0e7ff;
+}
+
+.metric-label {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.metric-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.metric-value.revenue {
+  color: #10b981;
+  font-weight: 800;
+}
+
+.metric-value.positive {
+  color: #10b981;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(16, 185, 129, 0.1);
+}
+
+.metric-value.neutral {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.metric-value.negative {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.metric-value.excellent {
+  color: #10b981;
+  font-weight: 800;
+  position: relative;
+}
+
+.metric-value.excellent::after {
+  content: '🔥';
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.metric-value.good {
+  color: #3b82f6;
+  font-weight: 800;
+}
+
+.metric-value.fair {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.metric-value.poor {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb 20%, #e5e7eb 80%, transparent);
+  margin: 0.75rem 0;
+}
+
+/* Property Details Section */
+.property-details-section {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 0 1.5rem 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.property-details-section h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.875rem;
+  color: #667eea;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.forecast-details p {
+  margin: 0.625rem 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-details p strong {
+  color: #1f2937;
+}
+
+/* Action Buttons */
+.property-actions {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.view-business-plan-btn,
+.view-listing-btn {
+  flex: 1;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+}
+
+.view-business-plan-btn::before,
+.view-listing-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.view-business-plan-btn:hover::before,
+.view-listing-btn:hover::before {
+  left: 100%;
+}
+
+.view-business-plan-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.view-business-plan-btn:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.view-listing-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.view-listing-btn:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-card {
+    padding: 0;
+    border-radius: 16px;
+  }
+
+  .property-image {
+    height: 220px;
+  }
+
+  .rank-badge {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .property-header {
+    padding: 1.25rem 1.25rem 0.875rem;
+  }
+
+  .property-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .property-price {
+    font-size: 1.5rem;
+  }
+
+  .property-metrics {
+    padding: 1.25rem;
+  }
+
+  .property-details-section {
+    margin: 0 1.25rem 1.25rem;
+    padding: 1rem;
+  }
+
+  .property-actions {
+    flex-direction: column;
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .view-business-plan-btn,
+  .view-listing-btn {
+    width: 100%;
+    padding: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-image {
+    height: 200px;
+  }
+
+  .rank-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .property-header h3 {
+    font-size: 1rem;
+  }
+
+  .property-price {
+    font-size: 1.4rem;
+  }
+
+  .metric-label {
+    font-size: 0.85rem;
+  }
+
+  .metric-value {
+    font-size: 1rem;
+  }
+}
