@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AdminForm.css';
 
 const AdminForm = ({ onPropertyAdded, onClose }) => {
-  const API_URL = 'http://localhost:5001';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://web-production-5c82b.up.railway.app';
 
   const [formData, setFormData] = useState({
     centris_id: '',

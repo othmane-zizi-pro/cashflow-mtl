@@ -6,7 +6,7 @@ import AdminForm from './components/AdminForm';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
 
-const API_URL = 'http://localhost:5001';
+const API_URL = process.env.REACT_APP_API_URL || 'https://web-production-5c82b.up.railway.app';
 
 function App() {
   const [properties, setProperties] = useState([]);

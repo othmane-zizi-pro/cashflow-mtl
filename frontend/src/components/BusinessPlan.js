@@ -8,7 +8,7 @@ const BusinessPlan = () => {
   const navigate = useNavigate();
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
-  const API_URL = 'http://localhost:5001';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://web-production-5c82b.up.railway.app';
 
   const fetchProperty = React.useCallback(async () => {
     try {
