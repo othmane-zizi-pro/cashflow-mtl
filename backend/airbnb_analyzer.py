@@ -119,11 +119,11 @@ class AirbnbAnalyzer:
         ]
 
         # Handle different column names in different dataset versions
-        available_cols = [col for col in relevant_cols if col in df.columns]
-
         # Alternative column names
         if 'bathrooms_text' not in df.columns and 'bathrooms' in df.columns:
             df['bathrooms_text'] = df['bathrooms']
+
+        available_cols = [col for col in relevant_cols if col in df.columns]
 
         df = df[available_cols].copy()
 
@@ -133,7 +133,11 @@ class AirbnbAnalyzer:
 
         # Clean bathrooms
         if 'bathrooms_text' in df.columns:
-            df['bathrooms'] = df['bathrooms_text'].str.extract(r'(\d+\.?\d*)').astype(float)
+            # Handle string bathrooms_text
+            if df['bathrooms_text'].dtype == 'object':
+                df['bathrooms'] = df['bathrooms_text'].str.extract(r'(\d+\.?\d*)').astype(float)
+            else:
+                df['bathrooms'] = df['bathrooms_text']
             df = df.drop('bathrooms_text', axis=1)
 
         # Fill missing values
@@ -242,7 +246,10 @@ class AirbnbAnalyzer:
 
 def initialize_analyzer():
     """Initialize and prepare the Airbnb analyzer."""
-    analyzer = AirbnbAnalyzer(data_dir='../data')
+    # Determine the correct data directory path
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(current_dir, 'data')
+    analyzer = AirbnbAnalyzer(data_dir=data_dir)
 
     # Try to load existing data
     df = analyzer.load_data()
