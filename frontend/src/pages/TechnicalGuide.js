@@ -641,7 +641,7 @@ cashflow investments that rely on appreciation for returns.`}</pre>
             </p>
             <p>
               <strong>GitHub Repository:</strong> <a href="https://github.com/othmane-zizi-pro/cashflow-mtl" target="_blank" rel="noopener noreferrer">
-                github.com/yourusername/cashflow-mtl
+                github.com/othmane-zizi-pro/cashflow-mtl
               </a>
             </p>
             <p>
