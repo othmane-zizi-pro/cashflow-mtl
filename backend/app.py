@@ -35,6 +35,11 @@ def initialize_app():
     print("Application initialized successfully")
 
 
+# Initialize components when module is imported (for gunicorn)
+print("Initializing application components...")
+initialize_app()
+
+
 def analyze_listing(listing):
     """
     Analyze a single property listing for investment potential.
@@ -352,7 +357,6 @@ def get_storage_stats():
 
 
 if __name__ == '__main__':
-    initialize_app()
     print("\nStarting Flask server on http://localhost:5001")
     print("API endpoints:")
     print("  GET  /api/health - Health check")
